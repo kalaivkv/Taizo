@@ -1,0 +1,27 @@
+.supporters {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+  
+    .title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+  
+    .logoContainer {
+      display: flex;
+      justify-content: center;
+      align-items:self-end;
+      gap: 50px; 
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+  
+    .logo {
+      width: 120px;
+      height: auto;
+     
+    }
+  }
+  

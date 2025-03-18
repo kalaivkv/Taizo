@@ -1,0 +1,123 @@
+.chatting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.image {
+  width: 400px;
+  height: 700px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @media (max-width: 768px) {
+    width: 300px;
+    height: auto;
+  }
+}
+
+.addressContainer {
+  max-width: 500px;
+  margin: auto;
+  text-align: left;
+  font-family: "Arial", sans-serif;
+
+  .companyName {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .addressSection {
+    margin-bottom: 20px;
+
+    .addressHeading {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .addressBox {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: left;
+
+      .addressContent {
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+
+        .icon {
+          color: #434241;
+          font-size: 1.5rem;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+        }
+
+        h4 {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          font-size: 1rem;
+          font-weight: bold;
+          margin: 0;
+        }
+
+        p {
+          margin-top: 5px;
+          font-size: 0.9rem;
+          color: #333;
+        }
+      }
+    }
+  }
+
+  .contactSection {
+    margin-top: 20px;
+
+    .contactItem {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+
+      .icon {
+        color: #292929;
+        font-size: 1.5rem;
+      }
+
+      a {
+        font-size: 1rem;
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+  }
+}

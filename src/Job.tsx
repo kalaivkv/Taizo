@@ -6,7 +6,7 @@ import phoneIcon from "./assets/whatsapp.svg";
 
 const Job: React.FC = () => {
   return (
-    <div className="container">
+    <div className="container my-4 col-md-9">
         <div className={styles.jobContainer}>
       <div className={styles.imageSection}>
         <img src={worker1} alt="Worker 1" className={styles.workerImage1} />
@@ -16,8 +16,11 @@ const Job: React.FC = () => {
       <div className={styles.textSection}>
         <h2>இரண்டு நாட்களில்</h2>
         <h1>
-          நல்ல சம்பளத்துடன் <br /> வேலையில் சேரலாம்!
+          நல்ல சம்பளத்துடன்  
         </h1>
+        <h3>
+        வேலையில் சேரலாம்!
+        </h3>
 
         <div className={styles.buttonGroup}>
           <button className={styles.whatsappButton}>

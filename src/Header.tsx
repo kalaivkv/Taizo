@@ -10,6 +10,11 @@ import Clients from "./Clients";
 import Company from "./Company";
 import Home from "./Home";
 import Job from "./Job";
+import AboutUs from "./AboutUs";
+import Team from "./Team";
+import Supporters from "./Supporter";
+import Mentors from "./Mentors";
+import Address from "./Address";
 
 interface NavItem {
   label: string;
@@ -99,6 +104,23 @@ const Header: React.FC = () => {
       {currentPage === "jobseeker" && (
         <>
           <Job />
+          <Footer />
+        </>
+      )}
+
+      {currentPage === "about" && (
+        <>
+          <AboutUs/>
+          <Team/>
+          <Mentors/>
+          <Supporters/>
+          <Footer />
+        </>
+      )}
+
+      {currentPage === "contact" && (
+        <>
+          <Address/>
           <Footer />
         </>
       )}

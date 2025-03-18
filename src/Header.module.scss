@@ -47,19 +47,22 @@
     }
 
     .contactButton {
-      background: #20aa20;
-      color: white;
+      background: transparent;
+      color: #20aa20;
       font-weight: bold;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
+      border: 1px solid #4cb94c;
+      padding: 10px 20px;
+      border-radius: 25px; 
       cursor: pointer;
-      transition: background 0.3s;
-
+      transition: all 0.3s ease-in-out;
+      font-size: 16px;
+    
       &:hover {
-        background: #006400;
+        background: #77dc77;
+        color: white;
       }
     }
+    
   }
 }
 

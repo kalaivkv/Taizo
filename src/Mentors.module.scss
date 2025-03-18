@@ -1,0 +1,81 @@
+.mentors {
+    text-align: center;
+    padding: 40px;
+  
+    .title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-bottom: 6rem;
+    }
+  
+    .cardContainer {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 1300px) {
+        .cardContainer {
+            gap: 100px;
+          } 
+    }
+
+    .card {
+      width: 600px;
+      padding: 60px 20px 20px; 
+      text-align: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      background-color: f8f8f8;
+      position: relative; 
+      overflow: visible;
+    }
+  
+    .avatar {
+      width: 130px;
+      height: 130px;
+      position: absolute;
+      top: -70px; 
+      left: 50%;
+      transform: translateX(-50%);
+      border: 5px solid white;
+      border-radius: 50%;
+      background-color: white;
+    }
+  
+    .name {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  
+    .position,
+    .company {
+      color: gray;
+      font-size: 0.9rem;
+    }
+  
+    .description {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #333;
+    }
+  
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+  
+      .icon {
+        font-size: 24px;
+        color: rgb(136, 136, 136);
+        transition: color 0.3s;
+  
+        &:hover {
+          color: #0077b5; 
+        }
+      }
+    }
+  }
+  
