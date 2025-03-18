@@ -1,0 +1,44 @@
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+  }
+  
+  h1{
+    display: flex;
+    justify-content: center;
+  }
+  .clientsContainer {
+    width: 100%;
+    overflow: hidden;
+    background: white;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .slider {
+    display: flex;
+    white-space: nowrap;
+    gap: 20px;
+    animation: scroll 25s linear infinite;
+    width: max-content;
+  }
+  
+  .clientItem {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+    img {
+        width: 250px;
+        height: 100px;
+      
+    }
+  }
+  
