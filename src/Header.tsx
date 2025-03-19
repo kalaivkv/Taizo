@@ -15,6 +15,7 @@ import Team from "./Team";
 import Supporters from "./Supporter";
 import Mentors from "./Mentors";
 import Address from "./Address";
+import Offers from "./Offers";
 
 interface NavItem {
   label: string;
@@ -103,6 +104,7 @@ const Header: React.FC = () => {
 
       {currentPage === "jobseeker" && (
         <>
+          <Offers/>
           <Job />
           <Footer />
         </>

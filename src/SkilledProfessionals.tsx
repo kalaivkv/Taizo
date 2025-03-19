@@ -38,11 +38,11 @@ const SkilledProfessionals: React.FC = () => {
         </p>
 
         <div className={styles.buttons}>
-          <a href="tel:+917806805808" className={styles.callButton}>
+          <a href="tel:+91872348877" className={styles.callButton}>
             <i className="bi bi-telephone-fill"></i> +91 87234 8877
           </a>
           <a
-            href="https://wa.me/917806805808"
+            href="https://wa.me/91872348877"
             target="_blank"
             className={styles.whatsappButton}
           >

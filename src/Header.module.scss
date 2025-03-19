@@ -6,8 +6,12 @@
   height: 70px;
   background: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-  z-index: 1000;
+  position: fixed;  
+  width: 100%;      
+  top: 0;           
+  left: 0;
+  z-index: 1000;    
+
 
   .logo img {
     width: 120px;

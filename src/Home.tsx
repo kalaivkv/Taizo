@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import styles from "./Home.module.scss";
 import PhoneIcon from "@mui/icons-material/Phone";
 import Button from "@mui/material/Button"; 

@@ -1,0 +1,188 @@
+.offers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem;
+  background: url("./assets/bg.jpg") no-repeat center center / cover;
+  position: relative;
+  color: #fff;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: auto;
+  min-height: 500px;
+  margin-top: 5rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 50, 0, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+  }
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    max-width: 50%;
+
+    @media (max-width: 992px) {
+        max-width: 100%;
+      }
+  }
+
+.imageContainer {
+ 
+  z-index: 2;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    animation: fadeInUp 1s ease-in-out;
+  }
+}
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translatex(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translatex(0);
+    }
+  }
+
+.content {
+  max-width: 50%;
+
+  @media (max-width: 992px) {
+    max-width: 100%;
+  }
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.3;
+  span {
+    color: #ffb400;
+  }
+  @media (max-width: 768px) {
+    font-size: 1.5rem; 
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+  }
+}
+
+.subText {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+.dynamicText {
+    color: #ffc107; 
+    font-weight: bold;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+.whatsappButton {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.callButton {
+  background-color: #25d366;
+  color: white;
+  border: none;
+}
+
+.offerList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1.5rem; 
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+    
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  .offerItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .offerIcon {
+    width: 24px;
+    height: 24px;
+  }
+  
+
+  .imageContainer {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    width: 450px;
+    z-index: 2;
+    max-width: 400px;
+  
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      animation: fadeInUp 1s ease-in-out;
+      display: block; 
+    }
+  
+    @media (max-width: 992px) {
+      position: static;
+      max-width: 100%;
+      margin-top: 2rem; 
+    }
+  }
+  
