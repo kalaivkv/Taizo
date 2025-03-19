@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 50px 70px;
   height: 70px;
   background: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -11,6 +11,10 @@
   top: 0;           
   left: 0;
   z-index: 1000;    
+
+  @media (max-width: 800px){
+    padding: 30px 40px;
+  }
 
 
   .logo img {
@@ -39,7 +43,7 @@
       text-decoration: none;
       font-size: 16px;
       color: #0a0a0a;
-      font-weight: 500;
+      font-weight: 400;
       transition: color 0.3s ease;
       background: none;
       border: none;
@@ -52,8 +56,7 @@
 
     .contactButton {
       background: transparent;
-      color: #20aa20;
-      font-weight: bold;
+      color: #20c020;
       border: 1px solid #4cb94c;
       padding: 10px 20px;
       border-radius: 25px; 
@@ -62,8 +65,10 @@
       font-size: 16px;
     
       &:hover {
-        background: #77dc77;
+        background: #2ba72b;
         color: white;
+        border: 1px solid #08a208 !important; 
+        
       }
     }
     
