@@ -36,7 +36,15 @@ const Header: React.FC = () => {
   const currentPage = useSelector((state: RootState) => state.navigation.page);
 
   useEffect(() => {
+    const savedPage = localStorage.getItem("currentPage");
+    if (savedPage) {
+      dispatch(navigate(savedPage)); 
+    }
+  }, [dispatch]);
+
+  useEffect(() => {
     document.body.style.overflow = "auto";
+    localStorage.setItem("currentPage", currentPage); 
   }, [currentPage]);
 
   const toggleMenu = () => {
@@ -104,7 +112,7 @@ const Header: React.FC = () => {
 
       {currentPage === "jobseeker" && (
         <>
-          <Offers/>
+          <Offers />
           <Job />
           <Footer />
         </>
@@ -112,17 +120,17 @@ const Header: React.FC = () => {
 
       {currentPage === "about" && (
         <>
-          <AboutUs/>
-          <Team/>
-          <Mentors/>
-          <Supporters/>
+          <AboutUs />
+          <Team />
+          <Mentors />
+          <Supporters />
           <Footer />
         </>
       )}
 
       {currentPage === "contact" && (
         <>
-          <Address/>
+          <Address />
           <Footer />
         </>
       )}

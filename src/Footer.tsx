@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.left}>
           <img
-            src="https://www.taizo.in/assets/img/New%20header-logo.svg"
+            src="https://www.taizo.in/assets/img/taizo-logo-img-white_footer.svg"
             alt="Taizo Logo"
             className={styles.logo}
           />
