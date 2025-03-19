@@ -51,12 +51,12 @@ const WhoWeServe: React.FC = () => {
               startIcon={<i className="bi bi-telephone-fill"></i>}
               className={styles.callButton}
             >
-              +91 87234 8877
+              +91780 680 5808
             </Button>
           </a>
 
           <a
-            href="https://wa.me/91872348877"
+            href="https://wa.me/91780 680 5808"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -33,19 +33,19 @@ const Home: React.FC = () => {
         <p>Made simple, organized, and quick.</p>
 
         <div className={styles.buttons}>
-          <a href="tel:+91872348877">
+          <a href="tel:+91 780 680 5808">
             <Button
               variant="contained"
               color="success"
               startIcon={<i className="bi bi-telephone-fill"></i>}
               className={styles.callButton}
             >
-              +91 87234 8877
+              +91 780 680 5808
             </Button>
           </a>
 
           <a
-            href="https://wa.me/91872348877"
+            href="https://wa.me/91780 680 5808"
             target="_blank"
             rel="noopener noreferrer"
           >
