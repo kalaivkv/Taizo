@@ -157,6 +157,12 @@
     font-size: 12px !important;
     padding: 8px 12px !important 
   }
+  
+  @media (max-width: 400px) {
+    font-size: 8px !important;
+    padding: 8px 10px !important; 
+    gap: 2px !important;
+  }
 }
 
 .callButton {
