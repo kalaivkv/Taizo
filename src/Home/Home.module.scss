@@ -48,6 +48,7 @@
     z-index: 2;
     color: white;
     text-align: start;
+    width: 100%;
     animation: zoomIn 1.2s ease-in-out;
 
     h2 {
@@ -56,6 +57,7 @@
 
     h1 {
       font-size: 2.5rem;
+      justify-content: start;
 
       span {
         color: #4caf50;
@@ -124,6 +126,7 @@
   display: flex;
   gap: 15px;
   margin-top: 20px;
+  width: 100%;
 
   @media (max-width: 768px) {
     gap: 10px; 
@@ -137,6 +140,7 @@
 
 .callButton,
 .whatsappButton {
+  flex: 1;
   display: flex;
   align-items: center;
   gap: 8px;
