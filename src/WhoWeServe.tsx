@@ -1,10 +1,9 @@
 import React from "react";
 import { Button } from "@mui/material";
-import PhoneIcon from "@mui/icons-material/Phone";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import SettingsIcon from "@mui/icons-material/Settings";
 import Profile from "./assets/Profile.png";
 import styles from "./WhoWeServe.module.scss";
+import whatsappIcon from "./assets/whatsapp.svg";
 
 const WhoWeServe: React.FC = () => {
   return (
@@ -44,28 +43,33 @@ const WhoWeServe: React.FC = () => {
             helping your business achieve efficiency and excellence.
           </p>
 
-          <div className={styles.buttonGroup}>
-            <a href="tel:+91872348877">
-              <Button
-                variant="contained"
-                color="success"
-                startIcon={<PhoneIcon />}
-                className={styles.callButton}
-              >
-                +91 87234 8877
-              </Button>
-            </a>
-            <a href="https://wa.me/91872348877" target="_blank">
-              <Button
-                variant="outlined"
-                color="success"
-                startIcon={<WhatsAppIcon />}
-                className={styles.whatsappButton}
-              >
-                WhatsApp Us
-              </Button>
-            </a>
-          </div>
+          <div className={styles.buttons}>
+          <a href="tel:+91872348877">
+            <Button
+              variant="contained"
+              color="success"
+              startIcon={<i className="bi bi-telephone-fill"></i>}
+              className={styles.callButton}
+            >
+              +91 87234 8877
+            </Button>
+          </a>
+
+          <a
+            href="https://wa.me/91872348877"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              variant="outlined"
+              color="success"
+              startIcon={<img src={whatsappIcon} alt="WhatsApp" width="35" />}
+              className={styles.whatsappButton}
+            >
+              WhatsApp Us
+            </Button>
+          </a>
+        </div>
         </div>
       </div>
     </section>

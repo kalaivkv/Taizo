@@ -7,6 +7,10 @@ import verifiedIcon from "./assets/tick img.png";
 import onRollIcon from "./assets/home-img.png";
 import foodIcon from "./assets/job-img.png";
 import salaryIcon from "./assets/allowance_img.png";
+import whatsappIcon from "./assets/whatsapp.svg";
+import { Button } from "@mui/material";
+
+
 const Offers: React.FC = () => {
   const offerItems = [
     { text: "100% Free & Verified Jobs", icon: verifiedIcon },
@@ -48,13 +52,34 @@ const Offers: React.FC = () => {
           Send <strong>'Hi'</strong> on WhatsApp or Call Us
         </p>
 
-        <div className={styles.buttonGroup}>
-          <button className={styles.whatsappButton}>
-            <FaWhatsapp /> WhatsApp Us
-          </button>
-          <button className={styles.callButton}>
-            <FaPhone /> +91 87234 8877
-          </button>
+        <div className={styles.buttons}>
+         
+          <a
+            href="https://wa.me/91780 680 5808"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              variant="outlined"
+              color="success"
+              startIcon={<img src={whatsappIcon} alt="WhatsApp" width="35" />}
+              className={styles.whatsappButton}
+            >
+              WhatsApp Us
+            </Button>
+          </a>
+
+          <a href="tel:+91780 680 5808">
+            <Button
+              variant="contained"
+              color="success"
+              startIcon={<i className="bi bi-telephone-fill"></i>}
+              className={styles.callButton}
+            >
+              +91780 680 5808
+            </Button>
+          </a>
+
         </div>
 
         <ul className={styles.offerList}>

@@ -7,10 +7,10 @@
   position: relative;
   color: #fff;
   border-radius: 10px;
-  max-width: 1200px;
+  max-width: 100%;
   margin: auto;
   min-height: 500px;
-  margin-top: 5rem;
+  margin-top: 4rem;
 
   &::before {
     content: "";
@@ -144,7 +144,8 @@
     margin-top: 1.5rem;
     
     @media (max-width: 768px) {
-      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem;
+      
     }
   }
   
@@ -186,4 +187,60 @@
       
     }
   }
+  .buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
   
+    @media (max-width: 768px) {
+    
+      align-items: center;
+    }
+  }
+  
+  .callButton,
+  .whatsappButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px !important;
+    font-size: 16px !important;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease !important;
+    border: 2px solid #4caf50;
+
+    @media (max-width: 768px) {
+    
+     font-size: 10px !important;
+     padding: 8px 10px !important;
+    }
+  }
+  
+  .callButton {
+    background: rgb(15, 139, 68) !important;
+    color: white !important;
+    border: 2px solid #4caf50 !important;
+    border-radius: 5px !important;
+  
+  
+  
+    &:hover {
+      background: transparent  !important;
+      color: white !important;
+    }
+  }
+  
+  .whatsappButton {
+    background: transparent !important;
+    color: white !important;
+    border: 2px solid #4caf50 !important;
+    border-radius: 5px !important;
+  
+  
+    &:hover {
+      background: rgb(15, 139, 68) !important;
+      color: white !important;
+    }
+  } 
