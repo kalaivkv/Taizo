@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./Mentors.module.scss";
 import { Typography, Card, CardContent, Avatar } from "@mui/material";
 import { LinkedIn, Email } from "@mui/icons-material";
-import mentor1 from "./assets/Shanmugasundaram.png";
-import mentor2 from "./assets/Vijayakumar.png";
+import mentor1 from "../assets/Shanmugasundaram.png";
+import mentor2 from "../assets/Vijayakumar.png";
 
 const mentors = [
   {

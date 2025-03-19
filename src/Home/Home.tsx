@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Home.module.scss";
 import { Button } from "@mui/material";
-import whatsappIcon from "./assets/whatsapp.svg"; 
-import homeImage from "./assets/new home-img1.jpg";
+import whatsappIcon from "../assets/whatsapp.svg"; 
+import homeImage from "../assets/new home-img1.jpg";
 
 const textOptions = [
   "Purchase / Sales",

@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaWhatsapp, FaPhone } from "react-icons/fa";
 import styles from "./Offers.module.scss";
-import OfferImage from "./assets/Boys.png";
-import verifiedIcon from "./assets/tick img.png";
-import onRollIcon from "./assets/home-img.png";
-import foodIcon from "./assets/job-img.png";
-import salaryIcon from "./assets/allowance_img.png";
-import whatsappIcon from "./assets/whatsapp.svg";
+import OfferImage from "../assets/Boys.png";
+import verifiedIcon from "../assets/tick img.png";
+import onRollIcon from "../assets/home-img.png";
+import foodIcon from "../assets/job-img.png";
+import salaryIcon from "../assets/allowance_img.png";
+import whatsappIcon from "../assets/whatsapp.svg";
 import { Button } from "@mui/material";
 
 

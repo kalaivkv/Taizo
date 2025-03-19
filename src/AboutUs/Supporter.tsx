@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./Supporters.module.scss";
 import { Typography } from "@mui/material";
 
-import nitTrichyLogo from "./assets/Cedilogo.png";
-import stpiLogo from "./assets/STPI_logo.png";
-import finBlueLogo from "./assets/finBlue_logo.png";
+import nitTrichyLogo from "../assets/Cedilogo.png";
+import stpiLogo from "../assets/STPI_logo.png";
+import finBlueLogo from "../assets/finBlue_logo.png";
 
 const supporters = [
   { name: "NIT Trichy", logo: nitTrichyLogo, alt: "NIT Trichy Logo" },

@@ -1,9 +1,9 @@
 import React from "react";
 import { Button } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
-import Profile from "./assets/Profile.png";
+import Profile from "../assets/Profile.png";
 import styles from "./WhoWeServe.module.scss";
-import whatsappIcon from "./assets/whatsapp.svg";
+import whatsappIcon from "../assets/whatsapp.svg";
 
 const WhoWeServe: React.FC = () => {
   return (

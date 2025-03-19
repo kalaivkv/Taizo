@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Address.module.scss";
 import { Email, Phone, LocationOn } from "@mui/icons-material";
-import Chat from "./assets/chat.png"; 
+import Chat from "../assets/chat.png"; 
 
 interface AddressProps {
   title: string;

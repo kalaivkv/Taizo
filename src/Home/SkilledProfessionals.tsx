@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./SkilledProfessionals.module.scss";
-import image from "./assets/Image.png";
-import whatsappIcon from "./assets/whatsapp.svg";
+import image from "../assets/Image.png";
+import whatsappIcon from "../assets/whatsapp.svg";
 import { Button } from "@mui/material";
 
 const SkilledProfessionals: React.FC = () => {

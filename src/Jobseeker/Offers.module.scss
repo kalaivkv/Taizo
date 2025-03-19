@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 3rem;
-  background: url("./assets/bg.jpg") no-repeat center center / cover;
+  background: url("../assets/bg.jpg") no-repeat center center / cover;
   position: relative;
   color: #fff;
   border-radius: 10px;
@@ -143,8 +143,17 @@
     padding: 0;
     margin-top: 1.5rem;
     
+ 
+    
     @media (max-width: 768px) {
       gap: 1rem;
+     
+      
+    }
+
+    @media (max-width: 996px) {
+      gap: 1rem;
+      padding-bottom: 16rem;
       
     }
   }
@@ -169,24 +178,47 @@
     bottom: 0;
     right: 10%;
     width: 450px;
-    z-index: 2;
     max-width: 400px;
+    z-index: 2;
   
     img {
       width: 100%;
       height: auto;
       object-fit: contain;
       animation: fadeInUp 1s ease-in-out;
-      display: block; 
+      display: block;
+    }
+    @media (max-width: 1000px) {
+    
+      right: 35%;
+      max-width: 30%;
+    }
+
+    @media (max-width: 800px) {
+    
+      right: 30%;
+      max-width: 40%;
+    }
+    @media (max-width: 700px) {
+    
+      right: 25%;
+      max-width: 40%;
+    }
+    @media (max-width: 500px) {
+    
+      right: 25%;
+      max-width: 50%;
     }
   
-    @media (max-width: 992px) {
-      position: static;
-      max-width: 100%;
-      margin-top: 2rem; 
-      
+    @media (max-width: 400px) {
+    
+      bottom: 0px; 
+      right: 15%;
+      max-width: 70%;
     }
   }
+  
+  
   .buttons {
     display: flex;
     gap: 15px;

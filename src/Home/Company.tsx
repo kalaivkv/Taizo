@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Company.module.scss";
-import factoryIcon from "./assets/vector.svg";
-import usersIcon from "./assets/userspeoplesvgrepocom-2.svg";
+import factoryIcon from "../assets/vector.svg";
+import usersIcon from "../assets/userspeoplesvgrepocom-2.svg";
 
 
 const Company: React.FC = () => {
