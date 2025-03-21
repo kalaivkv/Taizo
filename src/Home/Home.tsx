@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Home.module.scss";
-import { Button } from "@mui/material";
-import whatsappIcon from "../assets/whatsapp.svg"; 
+import whatsappIcon from "../assets/whatsapp.svg";
 import homeImage from "../assets/new home-img1.jpg";
 
 const textOptions = [
@@ -32,37 +31,20 @@ const Home: React.FC = () => {
         </h1>
         <p>Made simple, organized, and quick.</p>
 
-        <div className={styles.buttons}>
-          <a href="tel:+91 780 680 5808">
-            <Button
-              variant="contained"
-              color="success"
-              startIcon={<i className="bi bi-telephone-fill"></i>}
-              className={styles.callButton}
-            >
-              +91 780 680 5808
-            </Button>
-          </a>
-
-          <a
-            href="https://wa.me/91780 680 5808"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button
-              variant="outlined"
-              color="success"
-              startIcon={<img src={whatsappIcon} alt="WhatsApp" width="40" />}
-              className={styles.whatsappButton}
-            >
-              WhatsApp Us
-            </Button>
-          </a>
-        </div>
+        <div className="buttons">
+            <button className="callButton">
+              <i className="bi bi-telephone-fill"></i>
+              &nbsp;+91&nbsp;780&nbsp;680&nbsp;5808
+            </button>
+            <button className="whatsappButton">
+              <img src={whatsappIcon} alt="WhatsApp" />
+              &nbsp;WhatsApp&nbsp;Us
+            </button>
+          </div>
       </div>
 
       <div className={styles.rightSection}>
-        <img src={homeImage} alt="Worker" className={styles.workerImage} loading="lazy" />
+        <img src={homeImage} alt="Worker" className={styles.workerImage} />
       </div>
     </div>
   );

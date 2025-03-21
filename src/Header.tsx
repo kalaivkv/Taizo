@@ -16,6 +16,7 @@ import Supporters from "./AboutUs/Supporter";
 import Mentors from "./AboutUs/Mentors";
 import Address from "./ContactUs/Address";
 import Offers from "./Jobseeker/Offers";
+import Service from "./Home/Service";
 
 interface NavItem {
   label: string;
@@ -104,8 +105,9 @@ const Header: React.FC = () => {
           <Home />
           <Clients />
           <Company />
-          <WhoWeServe />
-          <SkilledProfessionals />
+          {/* <WhoWeServe />
+          <SkilledProfessionals /> */}
+          <Service/>
           <Footer />
         </>
       )}
