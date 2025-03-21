@@ -3,373 +3,111 @@
   justify-content: space-between;
   align-items: center;
   height: auto;
-  max-height: 100vh;
-  padding: 0px 90px;
+  padding: 80px 90px;
   background: url("../assets/Image.png") center/cover no-repeat;
   position: relative;
-  margin-top: 4rem;
-  overflow: hidden; 
- 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(3, 3, 3, 0.89);
-    z-index: 1;
-  }
-
-  .rightSection {
-    img {
-      width: 100%;
-      height: 900px ;
-      object-fit: contain;
-      display: block;
-      position: relative;
-      z-index: 2;
-      flex: 1;
-     
-      animation: zoomIn 1.2s ease-in-out; 
-    }
-  }
-  
-
-  @keyframes zoomIn {
-    from {
-      transform: scale(0.8);
-      opacity: 0;
-    }
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-
-  .leftSection {
-    position: relative;
-    z-index: 2;
-    color: white;
-    text-align: start;
-    width: 100%;
-    animation: zoomIn 1.2s ease-in-out;
-
-    h2 {
-      font-size: 1.8rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      justify-content: start;
-
-      span {
-        color: rgb(19, 125, 64);
-        font-weight: bold;
-      }
-    }
-
-    p {
-      font-size: 1rem;
-      margin-top: 10px;
-    }
-
-  }
-}
-
-
-@media (max-width: 770px) {
-  .homeContainer {
-    flex-direction: column;
-    justify-content: center;
-    align-items: self-start;
-    height: auto;
-    padding: 30px 10px;
-    gap: 3rem;
-  }
-
-  .leftSection {
-    text-align: center;
-    h2 {
-      font-size: 1.5rem !important;
-    }
-
-    h1 {
-      font-size: 1.2rem !important;
-      justify-content: start;
-    }
-
-    p {
-      font-size: 0.9rem !important;
-    }
-  }
-
-  .rightSection {
-    img {
-      width: 100% !important;
-      height: auto !important;
-    }
-  }
-}
-
-
-
-
-
-
-.homeContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: auto;
-  max-height: 100vh;
-  padding: 0px 90px;
-  background: url("../assets/Image.png") center/cover no-repeat;
-  position: relative;
-  margin-top: 4rem;
-  overflow: hidden; 
- 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(3, 3, 3, 0.89);
-    z-index: 1;
-  }
-
-  .rightSection {
-    img {
-      width: 100%;
-      height: 900px ;
-      object-fit: contain;
-      display: block;
-      position: relative;
-      z-index: 2;
-      flex: 1;
-     
-     /*  animation: zoomIn 1.2s ease-in-out;  */
-    }
-  }
-  
-
-  @keyframes zoomIn {
-    from {
-      transform: scale(0.8);
-      opacity: 0;
-    }
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-
-  .leftSection {
-    position: relative;
-    z-index: 2;
-    color: white;
-    text-align: start;
-    width: 100%;
-    /* animation: zoomIn 1.2s ease-in-out; */
-
-    h2 {
-      font-size: 1.8rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      justify-content: start;
-
-      span {
-        color: rgb(19, 125, 64);
-        font-weight: bold;
-      }
-    }
-
-    p {
-      font-size: 1rem;
-      margin-top: 10px;
-    }
-
-  }
-}
-
-
-
-
-
-@media (max-width: 770px) {
-  .homeContainer {
-    flex-direction: column;
-    justify-content: center;
-    
-    height: auto;
-    padding: 30px 90px;
-    gap: 3rem;
-  }
-
-  .leftSection {
-    text-align: center;
-    h2 {
-      font-size: 1.5rem !important;
-    }
-
-    h1 {
-      font-size: 1.2rem !important;
-      justify-content: start;
-    }
-
-    p {
-      font-size: 0.9rem !important;
-    }
-  }
-
-  .rightSection {
-    img {
-      width: 100% !important;
-      height: auto !important;
-    }
-  }
-
-}
-
-@media (min-width: 771px) and (max-width: 1000px) {
-    .homeContainer {
-   
-    justify-content: center;
-    
-    height: auto;
-    padding: 30px 90px;
-    gap: 3rem;
-  }
-
-  .leftSection {
-    text-align: center;
-    h2 {
-      font-size: 1rem !important;
-    }
-
-    h1 {
-      font-size: 1.2rem !important;
-      justify-content: start;
-    }
-
-    p {
-      font-size: 0.9rem !important;
-    }
-  }
-
-  .rightSection {
-    img {
-      margin-top: 4rem;
-      width: 100% !important;
-      
-      height: auto !important;
-    }
-  }
-
-}
-
-
-.buttons {
-  display: flex;
-  gap: 5rem;
-  margin-top: 1rem;
-  width: 100%;
-}
-
-.callButton,
-.whatsappButton {
-  flex: 1;
-  max-width: 200px;
-  min-width: 120px; 
-  padding: 15px 20px;
-  border-radius: 5px;
-  font-size: 14px;
-  font-family: "Poppins", sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  cursor: pointer;
-  text-align: center;
-  white-space: nowrap; 
+  margin-top: 6rem;
   overflow: hidden;
-  text-overflow: ellipsis;
+  gap: 2rem;
+
+  @media (max-width: 800px) {
+    margin-top: 4rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(3, 3, 3, 0.89);
+    z-index: 1;
+  }
+
+  .rightSection {
+    flex: 1;
+    max-width: 50%;
+    
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 700px;
+      object-fit: contain;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .leftSection {
+    position: relative;
+    z-index: 2;
+    color: white;
+    flex: 1;
+    max-width: 50%;
+
+    h2 { font-size: 1.8rem; }
+
+    h1 {
+      font-size: 2.5rem;
+      justify-content: left;
+      span {
+        color: rgb(19, 125, 64);
+        font-weight: bold;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
 }
 
-.callButton {
-  background: rgb(19, 125, 64);
-  color: white;
-  border: none;
-}
 
-.callButton:hover {
-  background: white;
-  color: rgb(19, 125, 64);
-  border: 1px solid rgb(19, 125, 64);
-  transition: transform 0.3s ease-in-out; 
-}
 
-.whatsappButton {
-  background: white;
-  color: rgb(19, 125, 64);
-  border: 1px solid rgb(19, 125, 64);
-}
-
-.whatsappButton:hover {
-  background: rgb(19, 125, 64);
-  color: white;
-}
-
-.whatsappButton img {
-  width: 20px;
-  height: 20px;
-}
-
-@media (max-width: 768px) {
-  .section {
+@media (max-width: 770px) {
+  .homeContainer {
     flex-direction: column;
-    text-align: left;
-  }
+    padding: 50px 20px;
+    text-align: center;
+    gap: 5rem;
 
-  .image {
-    width: 100%;
-  }
+    .leftSection, .rightSection {
+      max-width: 100%;
+    }
 
-  .content {
-    width: 100%;
-  }
+    .leftSection {
+      h1 { font-size: 1.8rem !important;
+      justify-content: center; }
+      h2 { font-size: 1.3rem !important;
+      justify-content: center; }
+    }
 
-  .buttons {
-    flex-direction: row;
-  }
-
-  .buttons button {
-    flex: 1;
-    width: auto; 
-    min-width: 120px;
+    .buttons {
+      flex-direction: column;
+      gap: 1rem;
+      button { max-width: 100%; }
+    }
   }
 }
-@media (max-width: 480px) {
-  .buttons {
-    flex-direction: row;
-    justify-content: space-between;
-  }
 
-  .buttons button {
-    flex: 1;
-    width: auto; 
-    min-width: 100px ;
-    padding: 8px 10px; 
-    font-size: 12px; 
-  }
-  
-  .leftSection{
-    h1{
-      font-size: 1rem !important;
+@media (max-width: 480px) {
+  .homeContainer {
+    .leftSection {
+      h1 { font-size: 1.5rem !important; }
+      p { font-size: 0.9rem !important; }
+    }
+    
+    .buttons button {
+      padding: 12px 15px;
+      font-size: 12px;
     }
   }
 }

@@ -8,6 +8,7 @@ import whatsappIcon from "../assets/whatsapp.svg";
 const Service: React.FC = () => {
   return (
     <div className="container who-we-serve">
+      <h1 className="mb-5">Who we serve</h1>
       <div className="row align-items-center section mb-5">
       <div className="col-md-6 mb-5">
           <img src={img1} alt="Business Professional" className="img-fluid image" />
