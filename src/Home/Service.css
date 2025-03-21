@@ -142,3 +142,18 @@ ul li {
     font-size: 12px; 
   }
 }
+@media (max-width: 370px) {
+  .buttons {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.2rem;
+  }
+
+  .buttons button {
+    flex: 1;
+    width: auto; 
+    min-width: 130px;
+    padding: 8px 10px; 
+    font-size: 12px; 
+  }
+}
