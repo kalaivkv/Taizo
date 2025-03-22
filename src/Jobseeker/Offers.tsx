@@ -7,8 +7,6 @@ import onRollIcon from "../assets/home-img.png";
 import foodIcon from "../assets/job-img.png";
 import salaryIcon from "../assets/allowance_img.png";
 import whatsappIcon from "../assets/whatsapp.svg";
-import { Button } from "@mui/material";
-
 
 const Offers: React.FC = () => {
   const offerItems = [
@@ -41,7 +39,12 @@ const Offers: React.FC = () => {
 
   return (
     <section className={styles.offers}>
-      <div className={styles.content}>
+      <motion.div
+        className={styles.content}
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         <h2 className={styles.heading}>
           உங்களுக்கு <br />{" "}
           <span className={styles.dynamicText}>{currentText}</span> <br /> வேலை
@@ -52,49 +55,37 @@ const Offers: React.FC = () => {
         </p>
 
         <div className={styles.buttons}>
-         
-          <a
-            href="https://wa.me/91780 680 5808"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button
-              variant="outlined"
-              color="success"
-              startIcon={<img src={whatsappIcon} alt="WhatsApp" width="35" />}
-              className={styles.whatsappButton}
-            >
-              WhatsApp Us
-            </Button>
-          </a>
+          <button className={styles.whatsappButton}>
+            <img src={whatsappIcon} alt="WhatsApp" />
+            &nbsp;WhatsApp&nbsp;Us
+          </button>
 
-          <a href="tel:+91780 680 5808">
-            <Button
-              variant="contained"
-              color="success"
-              startIcon={<i className="bi bi-telephone-fill"></i>}
-              className={styles.callButton}
-            >
-              +91780 680 5808
-            </Button>
-          </a>
-
+          <button className={styles.callButton}>
+            <i className="bi bi-telephone-fill"></i>
+            &nbsp;+91&nbsp;780&nbsp;680&nbsp;5808
+          </button>
         </div>
 
-        <ul className={styles.offerList}>
+        <ul className={`mt-5 ${styles.offerList}`}>
           {offerItems.map((item, index) => (
-            <li key={index} className={styles.offerItem}>
+            <motion.li
+              key={index}
+              className={styles.offerItem}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+            >
               <img src={item.icon} alt="Check" className={styles.offerIcon} />
               {item.text}
-            </li>
+            </motion.li>
           ))}
         </ul>
-      </div>
+      </motion.div>
 
       <motion.div
         className={styles.imageContainer}
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <img src={OfferImage} alt="Job Offer" className={styles.image} />

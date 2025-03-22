@@ -2,16 +2,20 @@ import React from "react";
 import "./Service.css";
 import img1 from "../assets/Profile.png";
 import img2 from "../assets/Image.png";
-import { Settings } from "@mui/icons-material";
 import whatsappIcon from "../assets/whatsapp.svg";
+import settings from "../assets/settingIcon.svg";
 
 const Service: React.FC = () => {
   return (
     <div className="container who-we-serve">
       <h1 className="mb-5">Who we serve</h1>
       <div className="row align-items-center section mb-5">
-      <div className="col-md-6 mb-5">
-          <img src={img1} alt="Business Professional" className="img-fluid image" />
+        <div className="col-md-6 mb-5">
+          <img
+            src={img1}
+            alt="Business Professional"
+            className="img-fluid image"
+          />
         </div>
         <div className="col-md-6 d-flex flex-column justify-content-between content ">
           <h3>For Manufacturing Businesses</h3>
@@ -22,28 +26,28 @@ const Service: React.FC = () => {
           <p>Whether you’re in:</p>
           <ul>
             <li>
-              <Settings style={{ color: "green" }} />
-              &nbsp;Automotive Parts Manufacturing
+              <img src={settings} alt="settingsIcon" />
+              Automotive Parts Manufacturing
             </li>
             <li>
-              <Settings style={{ color: "green" }} />
-              &nbsp;Aerospace Component Production
+              <img src={settings} alt="settingsIcon" />
+              Aerospace Component Production
             </li>
             <li>
-              <Settings style={{ color: "green" }} />
-              &nbsp;Medical Device Manufacturing
+              <img src={settings} alt="settingsIcon" />
+              Medical Device Manufacturing
             </li>
             <li>
-              <Settings style={{ color: "green" }} />
-              &nbsp;Tool and Die Development
+              <img src={settings} alt="settingsIcon" />
+              Tool and Die Development
             </li>
             <li>
-              <Settings style={{ color: "green" }} />
-              &nbsp;Metal Fabrication
+              <img src={settings} alt="settingsIcon" />
+              Metal Fabrication
             </li>
             <li>
-              <Settings style={{ color: "green" }} />
-              &nbsp;Precision Engineering
+              <img src={settings} alt="settingsIcon" />
+              Precision Engineering
             </li>
           </ul>
           <p>
@@ -64,7 +68,14 @@ const Service: React.FC = () => {
       </div>
 
       <div className="row align-items-center section">
-      <div className="col-md-6 d-flex flex-column justify-content-between content mb-5">
+        <div className="col-md-6 order-md-2 order-1">
+          <img
+            src={img2}
+            alt="Factory Worker"
+            className="img-fluid image mb-5"
+          />
+        </div>
+        <div className="col-md-6 d-flex flex-column justify-content-between content mb-5 order-md-1 order-12">
           <h3>For Skilled Professionals</h3>
           <p>
             Finding the right job shouldn’t be complicated. We simplify the job
@@ -72,17 +83,17 @@ const Service: React.FC = () => {
           </p>
           <ul>
             <li>
-              <Settings style={{ color: "green" }} /> CNC Machine Operators,
+              <img src={settings} alt="settingsIcon" /> CNC Machine Operators,
               Setters, and Programmers
             </li>
             <li>
-              <Settings style={{ color: "green" }} /> Quality Specialists
+              <img src={settings} alt="settingsIcon" /> Quality Specialists
             </li>
             <li>
-              <Settings style={{ color: "green" }} /> Design Engineers
+              <img src={settings} alt="settingsIcon" /> Design Engineers
             </li>
             <li>
-              <Settings style={{ color: "green" }} /> Mid to Senior Level
+              <img src={settings} alt="settingsIcon" /> Mid to Senior Level
               Engineering Professionals
             </li>
           </ul>
@@ -101,9 +112,6 @@ const Service: React.FC = () => {
               &nbsp;WhatsApp&nbsp;Us
             </button>
           </div>
-        </div>
-        <div className="col-md-6">
-          <img src={img2} alt="Factory Worker" className="img-fluid image" />
         </div>
       </div>
     </div>

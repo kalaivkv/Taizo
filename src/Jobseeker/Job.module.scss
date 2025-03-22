@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Liter&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
 .jobContainer {
   display: flex;
   align-items: center;
@@ -8,116 +15,74 @@
   gap: 3rem;
   color: #fff;
 
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+
   .imageSection {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    flex: 1 1 40%;
+    max-width: 400px;
 
     .workerImage1 {
-      width: 320px;
-      height: 320px;
-      border-radius: 10px;
+      width: 100%;
+      height: auto;
+      max-width: 320px;
+      max-height: 320px;
     }
   }
 
   .textSection {
-    text-align: left;
+    flex: 1 1 60%;
+    padding: 0 20px;
+    box-sizing: border-box;
 
     h2 {
-      font-size: 20px;
+      font-size: 23px;
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 30px;
       font-weight: bold;
-      color: yellow;
-      
-    
+      color: #ffde5d;
+      justify-content: flex-start;
+
       @media (max-width: 768px) {
-        font-size: 20px;
-        justify-content: start;
+        justify-content: center;
       }
     }
-    h3{
-      font-size: 28px;
+    h3 {
+      font-size: 30px;
       font-weight: bold;
       color: white;
-
-      
-      @media (max-width: 968px) {
-        font-size: 20px;
-        
-      }
-
     }
 
-    a{
+    a {
       text-decoration: none;
     }
-    .buttons {
-      display: flex;
-      gap: 15px;
-      margin-top: 20px;
-    
-      @media (max-width: 768px) {
-      
-        align-items: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .jobContainer {
+    gap: 2rem;
+    padding: 25px;
+
+    .imageSection {
+      max-width: 300px;
+
+      .workerImage1 {
+        max-width: 280px;
+        max-height: 280px;
       }
     }
-    
-    .callButton,
-    .whatsappButton {
-      display: flex !important;
-      align-items: center !important;
-      gap: 8px !important;
-      padding: 12px 20px !important;
-      font-size: 16px !important;
-      border-radius: 8px !important;
-      text-decoration: none !important;
-      transition: all 0.3s ease !important;
-      border: 2px solid #4caf50 !important;
-  
-      @media (max-width: 1200px) {
-      
-       font-size: 10px !important;
-       padding: 8px 10px !important;
-      }
+  }
 
-      @media (max-width: 500px) {
-        gap: 2px !important;
-        
-       }
-
-    }
-    
-    .callButton {
-      background: rgb(8, 107, 51) !important;
-      color: white !important;
-      border-radius: 5px !important;
-    
-    
-    
-      &:hover {
-        background: transparent  !important;
-        color: white !important;
-      }
-    }
-    
-    .whatsappButton {
-      background: rgb(8, 107, 51) !important;
-      color: white !important;
-      border-radius: 5px !important;
-    
-    
-      &:hover {
-        background: rgb(15, 139, 68) !important;
-        color: white !important;
-      }
-    } 
-
-
-
-
+  .callButton2,
+  .whatsappButton2 {
+    font-size: 14px !important;
+    padding: 12px 15px !important;
+    min-width: 110px !important;
   }
 }
 
@@ -131,6 +96,94 @@
   .imageSection {
     flex-direction: column;
   }
+}
 
-  
+.buttons2 {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.callButton2,
+.whatsappButton2 {
+  flex: 1;
+  max-width: 200px;
+  min-width: 120px;
+  padding: 14px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.callButton2 {
+  background: rgb(8, 107, 51);
+  color: white;
+  border: none;
+}
+
+.whatsappButton2 {
+  background: rgb(8, 107, 51);
+  color: white;
+  border: 1px solid rgb(8, 107, 51);
+}
+
+.whatsappButton2:hover {
+  background: rgb(8, 107, 51);
+  color: white;
+}
+
+.whatsappButton2 img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .buttons2 {
+    flex-direction: row;
+  }
+
+  .buttons2 button {
+    flex: 1;
+    width: auto;
+    min-width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .buttons2 {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .buttons2 button {
+    flex: 1;
+    width: auto;
+    min-width: 130px;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 370px) {
+  .buttons2 {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.2rem;
+  }
+
+  .buttons2 button {
+    flex: 1;
+    width: auto;
+    min-width: 130px;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
 }

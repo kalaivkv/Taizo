@@ -1,18 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fjalla+One&family=Liter&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 .offers {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 3rem;
+  padding: 2rem;
   background: url("../assets/bg.jpg") no-repeat center center / cover;
   position: relative;
   color: #fff;
   border-radius: 10px;
   max-width: 100%;
-  margin: auto;
-  min-height: 500px;
-  margin-top: 4rem;
-  @media (min-width: 799px){
+  margin: 4rem auto 0;
+  min-height: auto;
+  overflow: hidden;
+  @media (min-width: 799px) {
     margin-top: 6rem;
+  }
+  @media (max-width: 993px) {
+    padding-bottom: 2rem; 
+    text-align: center;
   }
 
   &::before {
@@ -26,46 +32,62 @@
     backdrop-filter: blur(5px);
     z-index: 1;
   }
-
-  @media (max-width: 992px) {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem;
+  @media (min-width: 994px) {
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 500px;
+    margin-top: 6rem;
+    padding: 3rem;
   }
 }
 
 .content {
-    position: relative;
-    z-index: 2;
-    flex: 1;
-    max-width: 50%;
-
-    @media (max-width: 992px) {
-        max-width: 100%;
-      }
-  }
-
-.imageContainer {
- 
+  position: relative;
   z-index: 2;
+  width: 100%;
+  margin-bottom: 23rem;
+
+  @media (min-width: 994px) {
+    max-width: 50%;
+    margin-bottom: 0;
+  }
+}
+.imageContainer {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
 
   img {
     width: 100%;
     height: auto;
     object-fit: contain;
-    animation: fadeInUp 1s ease-in-out;
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 994px) {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    width: 100%;
+    max-width: 500px;
+    margin: 0;
   }
 }
+
 @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translatex(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translatex(0);
-    }
+  from {
+    opacity: 0;
+    transform: translatex(50px);
   }
+  to {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
 
 .content {
   max-width: 50%;
@@ -76,14 +98,15 @@
 }
 
 .heading {
-  font-size: 2rem;
+  font-size: 26px;
   font-weight: bold;
   line-height: 1.3;
+  font-family: "DM Sans";
   span {
-    color: rgb(250, 199, 91);
+    color: #ffde5d;
   }
   @media (max-width: 768px) {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
   }
 
   @media (max-width: 480px) {
@@ -92,206 +115,200 @@
 }
 
 .subText {
-  font-size: 1.2rem;
+  font-size: 20px;
+  font-family: "DM Sans", sans-serif;
   margin-bottom: 1.5rem;
 }
 
-.buttonGroup {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 2rem;
+.dynamicText {
+  color: #ffc107;
+  font-weight: bold;
+  transition: opacity 0.5s ease-in-out;
+  font-size: 38px;
+  font-family: "DM Sans", sans-serif;
+}
+
+.offerList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  list-style: none;
+  margin: 2rem 0;
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    gap: 0.5rem;
   }
 
-  button {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1rem;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &:hover {
-      transform: scale(1.05);
-    }
+  @media (max-width: 996px) {
+    gap: 1rem;
   }
 }
-.dynamicText {
-    color: #ffc107; 
-    font-weight: bold;
-    transition: opacity 0.5s ease-in-out;
+
+.offerItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
+  color: #ffde5d;
+
+  & > :first-child {
+    width: 35px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
   }
-  
+
+  @media (max-width: 998px) {
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    justify-items: start;
+
+    gap: 0;
+    align-items: center;
+
+    margin: 0 auto;
+    max-width: 250px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 0.9rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 0.7rem;
+  }
+}
+
+.offerIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.imageContainer {
+  position: absolute;
+  bottom: 0;
+  right: 0%;
+  width: 450px;
+  max-width: 400px;
+  z-index: 2;
+
+  @media (min-width: 464px) {
+    right: 10%;
+  }
+
+  @media (min-width: 664px) {
+    right: 20%;
+  }
+
+  @media (min-width: 994px) {
+    right: 10%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    animation: fadeInUp 1s ease-in-out;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.callButton,
 .whatsappButton {
-  background-color: transparent;
-  color: white;
-  border: 2px solid white;
+  flex: 1;
+  max-width: 200px;
+  min-width: 120px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .callButton {
-  background-color: #25d366;
+  background: #169c50;
   color: white;
   border: none;
 }
 
-.offerList {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 1.5rem; 
-    list-style: none;
-    padding: 0;
-    margin-top: 1.5rem;
-    
- 
-    
-    @media (max-width: 768px) {
-      gap: 1rem;
-     
-      
-    }
+.callButton:hover {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+}
 
-    @media (max-width: 996px) {
-      gap: 1rem;
-      padding-bottom: 16rem;
-      
-    }
-  }
-  
-  .offerItem {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: rgb(250, 199, 91);
+.whatsappButton {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+}
 
-    @media (max-width: 600px) {
-      font-size: .7rem;
-    }
-    @media (max-width: 500px) {
-      font-size: .55rem;
-    }
-    @media (max-width: 400px) {
-      font-size: .54rem;
-    }
-    @media (max-width: 374px) {
-      font-size: .5rem;
-    }
+.whatsappButton:hover {
+  background: #169c50;
+  color: white;
+  border: 1px solid #169c50;
+}
 
+.whatsappButton img {
+  width: 20px;
+  height: 20px;
+}
 
-  }
-  
-  .offerIcon {
-    width: 24px;
-    height: 24px;
-  }
-  
-
-  .imageContainer {
-    position: absolute;
-    bottom: 0;
-    right: 10%;
-    width: 450px;
-    max-width: 400px;
-    z-index: 2;
-  
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      animation: fadeInUp 1s ease-in-out;
-      display: block;
-    }
-    @media (max-width: 1000px) {
-    
-      right: 35%;
-      max-width: 30%;
-    }
-
-    @media (max-width: 800px) {
-    
-      right: 30%;
-      max-width: 40%;
-    }
-    @media (max-width: 700px) {
-    
-      right: 25%;
-      max-width: 40%;
-    }
-    @media (max-width: 500px) {
-    
-      right: 25%;
-      max-width: 50%;
-    }
-  
-    @media (max-width: 400px) {
-    
-      bottom: 0px; 
-      right: 15%;
-      max-width: 70%;
-    }
-  }
-  
-  
+@media (max-width: 768px) {
   .buttons {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-  
-    @media (max-width: 768px) {
-    
-      align-items: center;
-    }
+    flex-direction: row;
   }
-  
-  .callButton,
-  .whatsappButton {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 20px !important;
-    font-size: 16px !important;
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: all 0.3s ease !important;
-    border: 2px solid #4caf50;
 
-    @media (max-width: 768px) {
-    
-     font-size: 10px !important;
-     padding: 8px 10px !important;
-     gap: 2px !important;
-    }
+  .buttons button {
+    flex: 1;
+    width: auto;
+    min-width: 120px;
   }
-  
-  .callButton {
-    background: rgb(15, 139, 68) !important;
-    color: white !important;
-    border: 2px solid #4caf50 !important;
-    border-radius: 5px !important;
-  
-  
-  
-    &:hover {
-      background: transparent  !important;
-      color: white !important;
-    }
+}
+@media (max-width: 480px) {
+  .buttons {
+    flex-direction: row;
+    justify-content: space-between;
   }
-  
-  .whatsappButton {
-    background: transparent !important;
-    color: white !important;
-    border: 2px solid #4caf50 !important;
-    border-radius: 5px !important;
-  
-  
-    &:hover {
-      background: rgb(15, 139, 68) !important;
-      color: white !important;
-    }
-  } 
+
+  .buttons button {
+    flex: 1;
+    width: auto;
+    min-width: 130px;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 370px) {
+  .buttons {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.2rem;
+  }
+
+  .buttons button {
+    flex: 1;
+    width: auto;
+    min-width: 130px;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
